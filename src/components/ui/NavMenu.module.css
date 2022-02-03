@@ -1,0 +1,12 @@
+.nav-menu-wrapper {
+  background: hsl( var(--clr-white) / 0.25);
+  padding: 0 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-menu {
+  padding: 0;
+  margin: 0 auto;
+  list-style-type: none;
+}

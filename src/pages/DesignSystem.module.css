@@ -1,0 +1,24 @@
+.design-system {
+  padding: 20px 0;
+}
+
+.color-groups {
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+  --gap: 2rem;
+}
+
+.color-groups li {
+  flex-grow: 1;
+}
+
+.color-item {
+  padding: 3rem 1rem 1rem;
+  margin-bottom: 20px;
+}
+
+.color-item span {
+  font-family: var(--ff-serif);
+  font-size: 1.5rem;
+}

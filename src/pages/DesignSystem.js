@@ -107,22 +107,48 @@ const DesignSystem = () => {
             <p className="center text-accent">Different States of Navigation Bar</p>
           </div>
           
-          <div className="flex">
-              <div style={{ marginTop: '5rem' }} className="flow">
+          <div className="flex interactive-buttons">
+              <div className="flow">
                 <LargeButton link="#" classes="uppercase ff-serif fs-600 text-dark bg-white">
                   Explore
                 </LargeButton>
                 <p className="center text-accent">Landing Page Main Button - Idle</p>
               </div>
               
-              <div style={{ marginBottom: '50vh' }}>
-                  {/* <!-- Tabs --> */}
+              <div className='flow'>
+                <NavMenu 
+                  navItems={[ 
+                    {
+                      text: 'Moon',
+                      active: true
+                    },
+                    {
+                      text: 'Mars',
+                      hovered: true
+                    },
+                    {
+                      text: 'Europa'
+                    }
+                  ]} 
+
+                  classes="flex"
+                  gap="1rem"
+                />
+                <p className="center text-accent">Tabs (Active, Hover, & Idle)</p>
                   
+                <div className="dot-indicators flex">
+                  <button aria-selected="true"><span className="sr-only">Slide title</span></button>
+                  <button aria-selected="false"><span className="sr-only">Slide title</span></button>
+                  <button aria-selected="false"><span className="sr-only">Slide title</span></button>
+                </div>
+                <p className="center text-accent">Slider 1 States (Active, Hover, & Idle)</p>
                   
-                  {/* <!-- Dots --> */}
-                  
-                  
-                  {/* <!-- Numbers --> */}
+                <div className="numeric-buttons flex">
+                  <button className="fs-600 ff-serif" role="tab" aria-selected="true">1</button>
+                  <button className="fs-600 ff-serif" role="tab" aria-selected="false">2</button>
+                  <button className="fs-600 ff-serif" role="tab" aria-selected="false">3</button>
+                </div>
+                <p className="center text-accent">Slider 2 States (Active, Hover, & Idle)</p>
               </div>
           </div>
         </section>

@@ -1,5 +1,5 @@
 .nav-item {
-  padding: 1.5rem 0;
+  padding: 1.5em 0;
   position: relative;
 }
 
@@ -21,7 +21,7 @@
   opacity: 0;
 }
 
-.nav-item:hover::after, .nav-item.hovered::after {
+.nav-item:hover::after, .nav-item:focus::after, .nav-item.hovered::after, .nav-item [aria-selected=true]::after {
   transform: scale(1);
   opacity: 0.5;
 }
@@ -35,3 +35,8 @@
   text-decoration: none;
 }
 
+.nav-item button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}

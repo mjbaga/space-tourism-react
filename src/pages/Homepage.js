@@ -7,8 +7,8 @@ const Homepage = () => {
 
   return (
     <div className={styles["homepage"]}>
-      {/* <Header /> */}
-      <div className="grid-container">
+      <Header />
+      <main id="main" className="grid-container grid-container--home">
         <div>
           <h1 className="text-accent fs-500 ff-sans-cond uppercase letter-spacing-1">So, you want to travel to
           <span className="fs-900 ff-serif text-white d-block">Space</span></h1>
@@ -17,11 +17,11 @@ const Homepage = () => {
           because we’ll give you a truly out of this world experience!</p>
         </div>
         <div>
-          <LargeButton link="#" classes="uppercase ff-serif fs-600 text-dark bg-white">
+          <LargeButton link="#" classes="uppercase ff-serif text-dark bg-white">
             Explore
           </LargeButton>
         </div>
-      </div>
+      </main>
     </div>
   )
 }

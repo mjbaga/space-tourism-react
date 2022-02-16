@@ -80,7 +80,6 @@ html:focus-within {
 
 /* Set core body defaults */
 body {
-  min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   font-family: var(--ff-sans-normal);
@@ -89,6 +88,7 @@ body {
   color: hsl(var(--clr-white));
   display: grid;
   grid-template-rows: min-content 1fr;
+  overflow-x: hidden;
 }
 
 /* Make images easier to work with */
@@ -150,6 +150,13 @@ select {
 
 .grid-container {
   display: grid;
+  text-align: center;
+  place-items: center;
+  padding-inline: 1rem;
+}
+
+.grid-container * {
+  max-width: 45ch;
 }
 
 .sr-only {
@@ -164,6 +171,21 @@ select {
   border: 0;
 }
 
+.skip-to-content {
+  position: absolute;
+  transform: translateY(-100%);
+  z-index: 9999;
+  background: hsl( var(--clr-white) );
+  color: hsl( var(--clr-dark) );
+  padding: .5em 1em;
+  margin-inline: auto;
+  transition: transform 500ms ease-in;
+}
+
+.skip-to-content:focus {
+  transform: translateY(0);
+}
+
 /* Colors */
 .bg-dark { background-color: hsl( var(--clr-dark) );}
 .bg-accent { background-color: hsl( var(--clr-light) );}
@@ -173,8 +195,12 @@ select {
 .text-accent { color: hsl( var(--clr-light) );}
 .text-white { color: hsl( var(--clr-white) );}
 
+#root {
+  /* min-height: 100vh; */
+}
+
 .App {
-  padding: 50px 0;
+  /* height: 100%; */
 }
 
 /* Typography */
@@ -313,9 +339,10 @@ select {
 
 @media screen and (min-width: 768px) {
   .grid-container {
+    text-align: left;
     display: grid;
     column-gap: var(--container-gap, 2rem);
-    grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0, 680px)) minmax(2rem, 1fr);
+    grid-template-columns: minmax(1rem, 1fr) repeat(2, minmax(0, 680px)) minmax(1rem, 1fr);
   }
   
   .grid-container > *:first-child {
@@ -325,5 +352,10 @@ select {
   .grid-container > *:last-child {
     grid-column: 3;
     place-items: center;
+  }
+
+  .grid-container--home {
+    padding-bottom: max(6rem, 20vh);
+    align-items: end;
   }
 }

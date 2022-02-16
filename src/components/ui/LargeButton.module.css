@@ -6,6 +6,7 @@
   aspect-ratio: 1;
   place-items: center;
   position: relative;
+  font-size: 1.5rem;
 }
 
 .large-button::after {
@@ -23,4 +24,8 @@
 .large-button:focus::after {
   transform: scale(1.5);
   opacity: 1;
+}
+
+@media screen and (min-width: 768px) {
+  font-size: 2rem;
 }

@@ -1,15 +1,16 @@
-import { ASSETS_PATH } from 'config';
+
 import styles from './Header.module.css';
-import NavMenu from 'components/ui/NavMenu';
+
+import logo from 'images/shared/logo.svg';
+import MainNav from 'components/ui/MainNav';
 
 const Header = () => {
 
   return (
     <div className={`${styles['header']} flex`}>
-      <div className={styles["logo"]}>
-        <img src={`${ASSETS_PATH}/shared/logo.svg`} alt="Space Tourism Logo" />
-      </div>
-      <NavMenu 
+      <img className={styles['logo']} src={logo} alt="Space Tourism Logo" />
+      <div className={styles['line-container']}><div className={styles['line']}></div></div>
+      <MainNav 
         navItems={[ 
           {
             link: '/',
@@ -34,9 +35,8 @@ const Header = () => {
           }
         ]} 
 
+        id="primary-navigation"
         classes="flex"
-        bgWrap="true"
-        gap="8rem"
       />
     </div>
   )

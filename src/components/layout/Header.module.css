@@ -1,0 +1,27 @@
+.header {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  margin: 1.5rem clamp(1.5rem, 5vw, 3.5rem);
+}
+
+.line-container {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+
+  .line-container {
+    display: block;
+    width: 100%;
+    z-index: 3000;
+  }
+
+  .line {
+    height: 1px;
+    background: hsl( var(--clr-white) / 0.25);
+    width: calc(100% + clamp(4rem, 2vw,8rem));
+  }
+}

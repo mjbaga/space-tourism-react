@@ -6,9 +6,9 @@ import LargeButton from 'components/ui/LargeButton';
 const Homepage = () => {
 
   return (
-    <div className={styles["homepage"]}>
+    <div className={`${styles["homepage"]} image-background`}>
       <Header />
-      <main id="main" className="grid-container grid-container--home">
+      <main id="main" className={`grid-container ${styles["grid-container--home"]}`}>
         <div>
           <h1 className="text-accent fs-500 ff-sans-cond uppercase letter-spacing-1">So, you want to travel to
           <span className="fs-900 ff-serif text-white d-block">Space</span></h1>

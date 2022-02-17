@@ -12,7 +12,6 @@ const NavMenu = (props) => {
       wrapperTrue={children => <div className={styles["nav-menu-wrapper"]}>{children}</div>}
       wrapperFalse={children => children}
     >
-
       <ul className={`${styles['nav-menu']} ${classes ? classes : ''}`} style={{ '--gap': gap }}>
         {navItems.map((item, i)=> (<NavItem item={item} key={i} />))}
       </ul>

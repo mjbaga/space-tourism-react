@@ -19,17 +19,17 @@ const Header = () => {
             active: true
           },
           {
-            link: '#',
+            link: '/destination',
             pretext: '01',
             text: 'Destination'
           },
           {
-            link: '#',
+            link: '/crew',
             pretext: '02',
             text: 'Crew'
           },
           {
-            link: '#',
+            link: '/technology',
             pretext: '03',
             text: 'Technology'
           }

@@ -8,14 +8,14 @@
     'title'
     'image'
     'tabs'
-    'content'
+    'content';
 }
 
 .grid-container--destination > .title {
   grid-area: title;
 }
 
-.grid-container--destination > img {
+.grid-container--destination > picture {
   grid-area: image;
   max-width: 60%;
 }
@@ -59,7 +59,7 @@
     justify-self: start;
   }
 
-  .grid-container--destination > img {
+  .grid-container--destination > picture {
     max-width: 50%;
     padding-block: 2rem;
   }
@@ -75,7 +75,7 @@
     --gap: min(6vw, 6rem);
   }
 
-  .grid-container--destination > img {
+  .grid-container--destination > picture {
     max-width: none;
   }
 

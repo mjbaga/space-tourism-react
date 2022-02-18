@@ -11,7 +11,23 @@ const Destination = () => {
       <Header />
       <main className={`flow grid-container ${styles["grid-container--destination"]}`}>
         <h1 className={`${styles['title']} numbered-title`}><span aria-hidden="true">01</span>Pick your destination</h1>
-        <img src={require("images/destination/image-moon.png")} alt="Moon" />
+        <picture>
+          <source srcSet={require("images/destination/image-moon.webp")} type="image/webp" />
+          <img src={require("images/destination/image-moon.png")} alt="Moon" />
+        </picture>
+        <picture hidden>
+          <source srcSet={require("images/destination/image-mars.webp")} type="image/webp" />
+          <img src={require("images/destination/image-mars.png")} alt="Mars" />
+        </picture>
+        <picture hidden>
+          <source srcSet={require("images/destination/image-europa.webp")} type="image/webp" />
+          <img src={require("images/destination/image-europa.png")} alt="Europa" />
+        </picture>
+        <picture hidden>
+          <source srcSet={require("images/destination/image-titan.webp")} type="image/webp" />
+          <img src={require("images/destination/image-titan.png")} alt="Titan" />
+        </picture>
+        
         <NavMenu
           navItems={[ 
             {
@@ -46,8 +62,8 @@ const Destination = () => {
             </div>
           </div>
         </article>
-{/*           
-        <article className="destination-info">
+         
+        <article hidden className={styles["destination-info"]}>
           <h2 className="uppercase fs-800 ff-serif">Mars</h2>
           <p className="text-accent fs-400">Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons, the tallest planetary mountain in our solar system. It’s two and a half times the size of Everest!</p>
           <div className={`flex ${styles["destination-meta"]}`}>
@@ -62,7 +78,7 @@ const Destination = () => {
           </div>
         </article>
 
-        <article className="destination-info">
+        <article hidden className={styles["destination-info"]}>
           <h2 className="uppercase fs-800 ff-serif">Europa</h2>
           <p className="text-accent fs-400">The smallest of the four Galilean moons orbiting Jupiter, Europa is a winter lover’s dream. With an icy surface, it’s perfect for a bit of ice skating, curling, hockey, or simple relaxation in your snug wintery cabin.</p>
           <div className={`flex ${styles["destination-meta"]}`}>
@@ -77,7 +93,7 @@ const Destination = () => {
           </div>
         </article>
 
-        <article className="destination-info">
+        <article hidden className={styles["destination-info"]}>
           <h2 className="uppercase fs-800 ff-serif">Titan</h2>
           <p className="text-accent fs-400">The only moon known to have a dense atmosphere other than Earth, Titan is a home away from home (just a few hundred degrees colder!). As a bonus, you get striking views of the Rings of Saturn.</p>
           <div className={`flex ${styles["destination-meta"]}`}>
@@ -90,7 +106,7 @@ const Destination = () => {
               <p class="ff-serif uppercase">7 years</p>
             </div>
           </div>
-        </article> */}
+        </article>
       </main>
     </div>
   )

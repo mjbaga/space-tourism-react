@@ -97,7 +97,7 @@ body {
 img,
 picture {
   max-width: 100%;
-  display: block;
+  /* display: block; */
 }
 
 /* Inherit fonts for inputs and buttons */
@@ -140,6 +140,10 @@ select {
 
 .flow > *:where(:not(:first-child)) {
   margin-top: var(--flow-space, 1rem);
+}
+
+.flow--space-small {
+  --flow-space: 0.5rem;
 }
 
 .container {
@@ -225,6 +229,10 @@ select {
 
 .text-faded-white {
   color: hsl( var(--clr-white) / 0.25);
+}
+
+.text-faded-white-2 {
+  color: hsl( var(--clr-white) / 0.5);
 }
 
 .d-block {

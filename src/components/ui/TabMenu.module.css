@@ -1,11 +1,11 @@
-.nav-menu-wrapper {
+.tab-menu-wrapper {
   background: hsl( var(--clr-white) / 0.25);
   padding: 0 2rem;
   display: flex;
   justify-content: center;
 }
 
-.nav-menu {
+.tab-menu {
   padding: 0;
   margin: 0;
   list-style-type: none;

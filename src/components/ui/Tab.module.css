@@ -1,0 +1,45 @@
+.tab-item {
+  margin: 0;
+}
+
+.tab-item button  {
+  cursor: pointer;
+  padding: var(--underline-gap, .5rem) 0;
+  background: transparent;
+  border: none;
+  position: relative;
+  padding-block: 1rem;
+}
+
+.tab-item button::after {
+  content: '';
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  background-color: hsl(var(--clr-white));
+  transform: scale(0);
+  transition: opacity 250ms linear, transform 250ms linear;
+  opacity: 0;
+}
+
+.tab-item button:hover::after, .tab-item button:focus::after {
+  transform: scale(1);
+  opacity: 0.5;
+}
+
+.tab-item button[aria-selected="true"]::after, .tab-item button.active::after {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.tab-item button:hover,
+.tab-item button:focus {
+  border-color: hsl( var(--clr-white) / .5);
+}
+
+.tab-item button.active,
+.tab-item [aria-selected="true"] {
+  color: hsl( var(--clr-white) / 1);
+}

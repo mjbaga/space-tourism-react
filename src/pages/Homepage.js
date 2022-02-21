@@ -17,7 +17,7 @@ const Homepage = () => {
           because we’ll give you a truly out of this world experience!</p>
         </div>
         <div>
-          <LargeButton link="#" classes="uppercase ff-serif text-dark bg-white">
+          <LargeButton link="/destination " classes="uppercase ff-serif text-dark bg-white">
             Explore
           </LargeButton>
         </div>

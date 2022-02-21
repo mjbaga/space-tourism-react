@@ -2,72 +2,14 @@
   background-image: url("images/crew/background-crew-mobile.jpg");
 }
 
-.grid-container--crew {
-  grid-template-areas:
-    'title'
-    'image'
-    'dots'
-    'content';
-}
-
-.grid-container--crew > .title {
-  grid-area: title;
-}
-
-.grid-container--crew > article {
-  grid-area: content;
-}
-
-.grid-container--crew > .dots {
-  grid-area: dots;
-}
-
-.grid-container--crew > .image-container {
-  grid-area: image;
-  border-bottom: 1px solid hsl( var(--clr-white) / .25);
-  margin-block: 2rem 1rem;
-}
-
-.grid-container--crew > .image-container img {
-  max-width: 50%;
-  margin-inline: auto;
-}
-
-.grid-container--crew article h2 {
-  line-height: 1.2;
-}
-
 @media (min-width: 768px) {
   .crew {
     background-position: center center;
     background-image: url("images/crew/background-crew-tablet.jpg") ;
   }
 
-  main.grid-container--crew {
-    --flow-space: 3rem;
-    padding-bottom: 0;
-    grid-template-areas:
-      'title'
-      'content'
-      'dots'
-      'image';
-  }
-
-  .grid-container--crew > .title {
+  .title {
     margin-top: 2rem;
-  }
-
-  .grid-container--crew > .dots {
-    margin-block: 2rem;
-  }
-
-  .grid-container--crew > .image-container {
-    border-bottom: none;
-    margin-block: 2rem 0;
-  }
-
-  .grid-container--crew > .image-container img {
-    max-width: 70%;
   }
 }
 
@@ -76,34 +18,12 @@
     background-image: url("images/crew/background-crew-desktop.jpg");
   }
 
-  .grid-container--crew > .title, .grid-container--crew > article, .grid-container--crew > .dots {
-    align-self: start;
+  .crew :global(.container) {
+    max-width: calc(1360px + 1rem + 40px);
   }
 
-  .grid-container--crew > .dots {
-    margin-block: 0;
-  }
-
-  .grid-container--crew > .image-container {
-    justify-self: center;
-  }
-
-  .grid-container--crew > .image-container img { 
-    max-width: none;
-  }
-
-  .grid-container--crew article h2 {
-    margin-top: 0.5rem;
-  }
-
-  main.grid-container--crew {
-    --flow-space: 0;
-    justify-items: start;
-    align-content: end;
-    grid-template-areas:
-      '. title image .'
-      '. content image .'
-      '. dots image .'
+  .title {
+    margin-top: 0;
   }
 }
 

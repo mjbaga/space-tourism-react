@@ -1,0 +1,114 @@
+.custom-slider {
+  display: grid;
+  grid-template-areas: 
+    'image'
+    'dots'
+    'content';
+  place-items: center;
+  /* --flow-space: 3rem; */
+}
+
+.custom-slider__content {
+  grid-area: content;
+  margin: 0 auto 2rem;
+  max-width: 50ch;
+  overflow-x: hidden;
+}
+
+.custom-slider__content .content-info {
+  text-align: center;
+}
+
+.custom-slider__content .content-info header {
+  margin-block: 1rem;
+}
+
+.custom-slider__image picture {
+  display: none;
+}
+
+.custom-slider__image .active {
+  display: block;
+}
+
+.custom-slider__image {
+  grid-area: image;
+  align-self: end;
+}
+
+.custom-slider__image picture {
+  border-bottom: 1px solid hsl( var(--clr-white) / .25);
+  margin-block: 2rem 1rem;
+}
+
+.custom-slider__image picture * {
+  max-width: 60%;
+  display: block;
+  margin-inline: auto;
+}
+
+.custom-slider > .dots {
+  grid-area: dots;
+}
+
+
+@media (min-width: 768px) {
+  .custom-slider {
+    grid-template-areas: 
+      'content'
+      'dots'
+      'image';
+  }
+  
+  .custom-slider__content {
+    margin-block: 2rem;
+    max-width: 80%;
+  }
+
+  .custom-slider__image picture {
+    border-bottom: none;
+    margin-block: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .custom-slider {
+    grid-template-areas: 
+      '. content image .'
+      '. dots image .';
+    /* align-items: start; */
+    column-gap: var(--container-gap, 2rem);
+    grid-template-columns: minmax(.5rem, 1fr) repeat(2, minmax(0, 680px)) minmax(.5rem, 1fr);
+  }
+
+  .custom-slider__content {
+    margin: 0;
+    justify-self: start;
+    max-width: 48ch;
+  }
+
+  .custom-slider__content .content-info {
+    text-align: left;
+  }
+
+  .custom-slider__image picture * {
+    max-width: 100%;
+  }
+
+  .custom-slider > .dots {
+    margin: 0;
+    align-self: end;
+    justify-self: start;
+    padding-bottom: 4rem;
+  }
+}
+
+@media (min-width: 1248px) {
+  .custom-slider {
+    grid-template-columns: minmax(1rem, 1fr) repeat(2, minmax(0, 680px)) minmax(1rem, 1fr);
+  }
+
+  .custom-slider__content {
+    max-width: 50ch;
+  }
+}

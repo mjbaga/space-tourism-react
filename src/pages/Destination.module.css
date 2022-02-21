@@ -28,27 +28,10 @@
   grid-area: content;
 }
 
-.destination-meta {
-  border-top: 1px solid hsl( var(--clr-white) / .25);
-  flex-direction: column;
-  align-items: center;
-  padding-top: 2.5rem;
-  margin-top: 2.5rem;
-}
-
-.destination-meta p {
-  font-size: 1.75rem;
-}
-
 @media (min-width: 768px) {
   .destination {
     background-position: center center;
     background-image: url("images/destination/background-destination-tablet.jpg") ;
-  }
-
-  .destination-meta {
-    flex-direction: row;
-    justify-content: space-evenly;
   }
 
   .grid-container--destination {
@@ -68,11 +51,6 @@
 @media (min-width: 1024px) {
   .destination {
     background-image: url("images/destination/background-destination-desktop.jpg");
-  }
-
-  .destination-meta {
-    justify-content: flex-start;
-    --gap: min(6vw, 6rem);
   }
 
   .grid-container--destination > picture {

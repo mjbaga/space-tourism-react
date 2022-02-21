@@ -1,5 +1,6 @@
 import LargeButton from '../components/ui/LargeButton';
-import NavMenu from '../components/ui/NavMenu';
+import MainNav from '../components/ui/MainNav';
+import TabMenu from '../components/ui/TabMenu';
 import styles from './DesignSystem.module.css';
 
 const DesignSystem = () => {
@@ -78,7 +79,7 @@ const DesignSystem = () => {
           {/* <!-- navigation --> */}
           <div className="flow">
             <nav>
-              <NavMenu 
+              <MainNav 
                 navItems={[ 
                   {
                     link: '#',
@@ -116,7 +117,7 @@ const DesignSystem = () => {
               </div>
               
               <div className='flow'>
-                <NavMenu 
+                <TabMenu 
                   navItems={[ 
                     {
                       text: 'Moon',
@@ -137,9 +138,9 @@ const DesignSystem = () => {
                 <p className="center text-accent">Tabs (Active, Hover, & Idle)</p>
                   
                 <div className="dot-indicators flex">
-                  <button aria-selected="true"><span className="sr-only">Slide title</span></button>
-                  <button aria-selected="false"><span className="sr-only">Slide title</span></button>
-                  <button aria-selected="false"><span className="sr-only">Slide title</span></button>
+                  <button><span className="sr-only">Slide title</span></button>
+                  <button><span className="sr-only">Slide title</span></button>
+                  <button><span className="sr-only">Slide title</span></button>
                 </div>
                 <p className="center text-accent">Slider 1 States (Active, Hover, & Idle)</p>
                   

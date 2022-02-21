@@ -72,14 +72,6 @@ const Destination = () => {
       <Header />
       <main className={`flow grid-container ${styles["grid-container--destination"]}`}>
         <h1 className={`${styles['title']} numbered-title`}><span aria-hidden="true">01</span>Pick your destination</h1>
-
-        {/* Images are outside of TabPanel because of design constraints (for now) */}
-        {DESTINATIONS.map((item, i) => (
-          <picture key={i} hidden={activeTab !== i ? true : false }>
-            <source srcSet={item.images.webp} type="image/webp" />
-            <img src={item.images.png} alt={item.name} />
-          </picture>
-        ))}
         
         <TabMenu
           navItems={navItems}
@@ -89,6 +81,14 @@ const Destination = () => {
           classes={`${styles["tab-list"]}`}
           gap="1rem"
         />
+
+        {/* Images are outside of TabPanel because of design constraints (for now) */}
+        {DESTINATIONS.map((item, i) => (
+          <picture key={i} hidden={activeTab !== i ? true : false }>
+            <source srcSet={item.images.webp} type="image/webp" />
+            <img src={item.images.png} alt={item.name} />
+          </picture>
+        ))}
 
         {DESTINATIONS.map((item, i) => (
           <TabPanel id={`tab-panel-${i}`} key={i} index={i} info={item} classes={styles["destination-info"]} activeTab={activeTab} />

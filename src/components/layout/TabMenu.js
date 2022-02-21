@@ -2,7 +2,7 @@ import styles from './TabMenu.module.css';
 
 import { useRef, createRef } from 'react';
 
-import Tab from 'components/ui/Tab';
+import Tab from 'components/layout/Tab';
 
 const TabMenu = (props) => {
   const { navItems, classes, gap, activeTab } = props;

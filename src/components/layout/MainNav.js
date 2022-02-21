@@ -1,4 +1,4 @@
-import NavItem from './NavItem';
+import NavItem from 'components/layout/NavItem';
 
 import styles from './MainNav.module.css';
 import { Fragment } from 'react/cjs/react.development';

@@ -5,7 +5,7 @@ const TabPanel = ({info, id, index, classes, activeTab}) => {
   const { name, description, distance, travel} = info;
 
   return (
-    <article id={id} className={`${styles["tab-panel"]} ${classes ? classes : ''}`} hidden={activeTab !== index ? true : false }>
+    <article id={id} className={`${styles["tab-panel"]} ${classes ? classes : ''}`} hidden={activeTab !== index ? true : false } role="tabpanel" tabIndex={activeTab !== index ? -1 : 0}>
       <h2 className="uppercase fs-800 ff-serif">{name}</h2>
       <p className="text-accent fs-400">{description}</p>
       <div className={`flex ${styles["tab-panel-meta"]}`}>

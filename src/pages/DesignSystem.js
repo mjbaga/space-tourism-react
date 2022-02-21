@@ -1,6 +1,6 @@
 import LargeButton from '../components/ui/LargeButton';
-import MainNav from '../components/ui/MainNav';
-import TabMenu from '../components/ui/TabMenu';
+import MainNav from '../components/layout/MainNav';
+import TabMenu from '../components/layout/TabMenu';
 import styles from './DesignSystem.module.css';
 
 const DesignSystem = () => {

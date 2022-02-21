@@ -2,7 +2,7 @@
 import styles from './Header.module.css';
 
 import logo from 'images/shared/logo.svg';
-import MainNav from 'components/ui/MainNav';
+import MainNav from 'components/layout/MainNav';
 
 const Header = () => {
 

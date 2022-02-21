@@ -2,9 +2,9 @@
 import styles from './Destination.module.css';
 
 import Header from 'components/layout/Header';
-import TabMenu from 'components/ui/TabMenu';
+import TabMenu from 'components/layout/TabMenu';
 import { useState } from 'react';
-import TabPanel from 'components/ui/TabPanel';
+import TabPanel from 'components/layout/TabPanel';
 
 const DESTINATIONS = [
   {

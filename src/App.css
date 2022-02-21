@@ -268,7 +268,49 @@ select {
 }
 
 /* Components */
-/* Temporary: to transfer to components when needed */
+
+/* .underline-indicators > * {
+  cursor: pointer;
+  padding: var(--underline-gap, .5rem) 0;
+  background: transparent;
+  border: none;
+  position: relative;
+  padding-block: 1rem;
+}
+
+.underline-indicators > *::after {
+  content: '';
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  background-color: hsl(var(--clr-white));
+  transform: scale(0);
+  transition: opacity 250ms linear, transform 250ms linear;
+  opacity: 0;
+} */
+
+/* .underline-indicators > *:hover::after, .underline-indicators > *:focus::after {
+  transform: scale(1);
+  opacity: 0.5;
+}
+
+.underline-indicators > [aria-selected="true"]::after, .underline-indicators > .active::after {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.underline-indicators > *:hover,
+.underline-indicators > *:focus {
+  border-color: hsl( var(--clr-white) / .5);
+}
+
+.underline-indicators > .active,
+.underline-indicators > [aria-selected="true"] {
+  color: hsl( var(--clr-white) / 1);
+} */
+
 .dot-indicators {
   margin: 1rem auto;
 }

@@ -28,6 +28,18 @@
   grid-area: content;
 }
 
+.destination-meta {
+  border-top: 1px solid hsl( var(--clr-white) / .25);
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2.5rem;
+  margin-top: 2.5rem;
+}
+
+.destination-meta p {
+  font-size: 1.75rem;
+}
+
 @media (min-width: 768px) {
   .destination {
     background-position: center center;
@@ -46,6 +58,12 @@
     max-width: 50%;
     padding-block: 2rem;
   }
+
+  .destination-meta {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
 }
 
 @media (min-width: 1024px) {
@@ -57,6 +75,7 @@
     max-width: none;
   }
 
+  
   main.grid-container--destination {
     --flow-space: 0;
     justify-items: start;
@@ -66,6 +85,12 @@
       '. image tabs .'
       '. image content .'
   }
+
+  .destination-meta {
+    justify-content: flex-start;
+    --gap: min(6vw, 6rem);
+  }
+
 }
 
 

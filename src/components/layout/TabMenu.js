@@ -5,15 +5,14 @@ import { useRef, createRef } from 'react';
 import Tab from 'components/layout/Tab';
 import { moveTabs } from 'CustomFunctions';
 
-const TabMenu = (props) => {
-  const { navItems, classes, gap, activeTab } = props;
+const TabMenu = ({ navItems, classes, gap, activeTab, onNavSelect, type }) => {
 
   const tabRefs = useRef([]);
 
   tabRefs.current = navItems.map((_, i) => tabRefs.current[i] ?? createRef());
 
   const clickItemHandler = (index) => {
-    props.onNavSelect(index);
+    onNavSelect(index);
   }
 
   // Implementing first variation of tab arrow keys navigation where tab group and tabs are separate components
@@ -29,7 +28,18 @@ const TabMenu = (props) => {
 
   return (
     <ul className={`${styles['tab-menu']} ${classes ? classes : ''} flex`} style={{ '--gap': gap }} role="tablist">
-      {navItems.map((item, i) => <Tab key={i} index={i} item={item} selectedTab={activeTab} handleChange={clickItemHandler} onArrowChange={arrowPressHandler} ref={tabRefs.current[i]} />)}
+      {navItems.map((item, i) => 
+        <Tab 
+          key={i} 
+          index={i} 
+          item={item} 
+          selectedTab={activeTab} 
+          handleChange={clickItemHandler} 
+          onArrowChange={arrowPressHandler} 
+          ref={tabRefs.current[i]} 
+          type={type}
+        />)
+      }
     </ul>
   )
 }

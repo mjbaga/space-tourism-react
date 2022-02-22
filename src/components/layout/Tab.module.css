@@ -43,3 +43,47 @@
 .tab-item [aria-selected="true"] {
   color: hsl( var(--clr-white) / 1);
 }
+
+.tab-item button.round-btn {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 1 / 1;;
+  border-radius: 50%;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0.5em 1em;
+  color: hsl( var(--clr-white));
+  border: 1px solid hsl( var(--clr-white) / 0.5);
+  transition: all 250ms linear;
+  width: 50px;
+  font-size: 1rem;
+}
+
+.tab-item button.round-btn:hover {
+  border: 1px solid hsl( var(--clr-white));
+}
+
+.tab-item button.round-btn[aria-selected=true] {
+  background: hsl( var(--clr-white));
+  color: hsl( var(--clr-dark));
+  border: 1px solid hsl( var(--clr-white));
+}
+
+.tab-item button.round-btn::after {
+  content: none;
+}
+
+@media (min-width: 768px) {
+  .tab-item button.round-btn {
+    width: 60px;
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .tab-item button.round-btn {
+    width: 80px;
+    font-size: 1.5rem;
+  }
+}

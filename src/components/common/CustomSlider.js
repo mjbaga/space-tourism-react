@@ -57,9 +57,9 @@ const CustomSlider = ({items, title}) => {
             onKeyDown={keyDownHandler}
             role="tab" 
             aria-selected={activeSlide === i ? true : false}
-            aria-controls={item['tab-id']}
+            aria-controls={item.tabId}
             ref={navBtnRefs.current[i]}
-            data-image={item['image-id']}
+            data-image={item.imageId}
             tabIndex={activeSlide === i ? 0 : -1}
           >
             <span className="sr-only">{item.name}</span>
@@ -75,7 +75,7 @@ const CustomSlider = ({items, title}) => {
           onSlideChange={slideChangeHandler}
         >
           {items.map((item, i) => (
-            <SwiperSlide key={i} className={styles["content-info"]} role="tabpanel" id={item['tab-id']} tabIndex={activeSlide === i ? 0 : -1}>
+            <SwiperSlide key={i} className={styles["content-info"]} role="tabpanel" id={item.tabId} tabIndex={activeSlide === i ? 0 : -1}>
               <header>
                 <h2 className="fs-600 d-block uppercase ff-serif text-faded-white-2">{item.role}</h2>
                 <p className="uppercase fs-700 ff-serif">{item.name}</p>
@@ -88,7 +88,7 @@ const CustomSlider = ({items, title}) => {
 
       <div className={styles["custom-slider__image"]}>
         {items.map((item, i) => (
-          <picture key={i} className={activeSlide === i ? styles.active : ''} id={item['image-id']}> 
+          <picture key={i} className={activeSlide === i ? styles.active : ''} id={item.imageId}> 
             <source srcSet={item.images.webp} type="image/webp" />
             <img src={item.images.png} alt={item.name} />
           </picture>

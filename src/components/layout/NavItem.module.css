@@ -41,7 +41,7 @@
 }
 
 @media (max-width: 767px) {
-  .nav-item::after {
+  .nav-item *::after {
     content: none;
   }
 }

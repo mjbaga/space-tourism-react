@@ -2,8 +2,7 @@
 import { useRef, forwardRef, useImperativeHandle } from 'react';
 import styles from './Tab.module.css';
 
-const Tab = forwardRef(({item, index, selectedTab, handleChange, onArrowChange}, ref) => {
-  const { id, tabPanelId, name } = item;
+const Tab = forwardRef(({item, index, selectedTab, handleChange, onArrowChange, type = 'name'}, ref) => {
   const btnRef = useRef();
 
   const btnClickHandler = (e) => {
@@ -34,18 +33,18 @@ const Tab = forwardRef(({item, index, selectedTab, handleChange, onArrowChange},
     <li className={styles["tab-item"]} role="presentation">
       <button 
         ref={btnRef}
-        role="tab" 
-        id={id}
+        role="tab"
         index={index}
         aria-selected={selectedTab === index}
-        aria-controls={tabPanelId}
+        aria-controls={item.tabId}
         onClick={btnClickHandler}
         onKeyDown={keyDownHandler}
         tabIndex={selectedTab === index ? 0 : -1}
         className={`${selectedTab === index ? styles.active : '' } 
+        ${type !== 'name' ? styles['round-btn'] : ''}
         uppercase ff-sans-cond text-accent bg-dark letter-spacing-2`}
       >
-        {name}
+        {type === 'name' ? item.name : index + 1 }
       </button>
     </li>
   )

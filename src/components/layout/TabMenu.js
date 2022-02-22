@@ -3,6 +3,7 @@ import styles from './TabMenu.module.css';
 import { useRef, createRef } from 'react';
 
 import Tab from 'components/layout/Tab';
+import { moveTabs } from 'CustomFunctions';
 
 const TabMenu = (props) => {
   const { navItems, classes, gap, activeTab } = props;
@@ -15,22 +16,15 @@ const TabMenu = (props) => {
     props.onNavSelect(index);
   }
 
+  // Implementing first variation of tab arrow keys navigation where tab group and tabs are separate components
+  // EDIT: Refactored into a reusable function: arrowKeysTabPress
   const arrowPressHandler = (index, keyCode) => {
-    const keydownLeft = 37;
-    const keydownRight = 39;
-    let newIndex = 0;
+    let tab = moveTabs(tabRefs.current.length, index, keyCode);
 
-    if(!(keyCode === keydownLeft || keyCode === keydownRight))
-      return false;
-
-    if(keyCode === keydownLeft)
-      newIndex = index <= 0 ? tabRefs.current.length - 1 : index - 1;
-
-    if(keyCode === keydownRight)
-      newIndex = index >= (tabRefs.current.length - 1) ? 0 : index + 1;
-
-    tabRefs.current[index].current.deselect();
-    tabRefs.current[newIndex].current.select();
+    if(tab.update) {
+      tabRefs.current[index].current.deselect();
+      tabRefs.current[tab.newIndex].current.select();
+    }
   }
 
   return (

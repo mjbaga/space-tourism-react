@@ -1,19 +1,30 @@
 {
   "files": {
-    "main.css": "/space-tourism-react/static/css/main.239cb72d.css",
-    "main.js": "/space-tourism-react/static/js/main.1fa9168c.js",
+    "main.css": "/space-tourism-react/static/css/main.b833a9e1.css",
+    "main.js": "/space-tourism-react/static/js/main.92d08147.js",
     "static/media/background-home-desktop.jpg": "/space-tourism-react/static/media/background-home-desktop.cdf3864ecbfdf20e8c3b.jpg",
+    "static/media/image-moon.png": "/space-tourism-react/static/media/image-moon.d287d07182de3015952f.png",
+    "static/media/background-destination-desktop.jpg": "/space-tourism-react/static/media/background-destination-desktop.468b922c69bf5499b4bc.jpg",
+    "static/media/image-europa.png": "/space-tourism-react/static/media/image-europa.3e95f7d0a16fe2ebf4c6.png",
     "static/media/background-home-tablet.jpg": "/space-tourism-react/static/media/background-home-tablet.bc9efcc3281fa6801077.jpg",
+    "static/media/image-mars.png": "/space-tourism-react/static/media/image-mars.1b224c8663251270d79f.png",
+    "static/media/background-destination-tablet.jpg": "/space-tourism-react/static/media/background-destination-tablet.8f55d346d8b6cfd95ab7.jpg",
+    "static/media/image-titan.png": "/space-tourism-react/static/media/image-titan.d4b078f9ce17e686ae99.png",
+    "static/media/image-europa.webp": "/space-tourism-react/static/media/image-europa.c3be32383f31d0f76d96.webp",
+    "static/media/image-moon.webp": "/space-tourism-react/static/media/image-moon.b5a3c90e9c8eeb2cb68d.webp",
     "static/media/background-home-mobile.jpg": "/space-tourism-react/static/media/background-home-mobile.13f7adecbcb3c3f170d8.jpg",
+    "static/media/image-mars.webp": "/space-tourism-react/static/media/image-mars.7f55f721b4a64b7a56a8.webp",
+    "static/media/background-destination-mobile.jpg": "/space-tourism-react/static/media/background-destination-mobile.e0131e27e751ead1a922.jpg",
+    "static/media/image-titan.webp": "/space-tourism-react/static/media/image-titan.80738bc61e5d1217a19a.webp",
     "index.html": "/space-tourism-react/index.html",
     "static/media/logo.svg": "/space-tourism-react/static/media/logo.565f7f2c0534403f11b71994f4311210.svg",
     "static/media/icon-close.svg": "/space-tourism-react/static/media/icon-close.d47fda63cbd8b3fedbbc.svg",
     "static/media/icon-hamburger.svg": "/space-tourism-react/static/media/icon-hamburger.5273efa7c50e96ef3e51.svg",
-    "main.239cb72d.css.map": "/space-tourism-react/static/css/main.239cb72d.css.map",
-    "main.1fa9168c.js.map": "/space-tourism-react/static/js/main.1fa9168c.js.map"
+    "main.b833a9e1.css.map": "/space-tourism-react/static/css/main.b833a9e1.css.map",
+    "main.92d08147.js.map": "/space-tourism-react/static/js/main.92d08147.js.map"
   },
   "entrypoints": [
-    "static/css/main.239cb72d.css",
-    "static/js/main.1fa9168c.js"
+    "static/css/main.b833a9e1.css",
+    "static/js/main.92d08147.js"
   ]
 }

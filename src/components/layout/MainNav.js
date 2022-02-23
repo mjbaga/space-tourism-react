@@ -1,8 +1,7 @@
 import NavItem from 'components/layout/NavItem';
 
 import styles from './MainNav.module.css';
-import { Fragment } from 'react/cjs/react.development';
-import { useState } from 'react';
+import { Fragment, useState } from 'react';
 
 const MainNav = (props) => {
   const { navItems, classes, gap, id } = props;

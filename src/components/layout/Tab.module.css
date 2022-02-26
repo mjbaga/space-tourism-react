@@ -47,7 +47,7 @@
 .tab-item button.round-btn {
   display: grid;
   place-items: center;
-  aspect-ratio: 1 / 1;;
+  aspect-ratio: 1 / 1;
   border-radius: 50%;
   border: none;
   background: transparent;
@@ -85,5 +85,14 @@
   .tab-item button.round-btn {
     width: 80px;
     font-size: 1.5rem;
+  }
+}
+
+@supports (aspect-ratio: 1/1) {
+  @media (max-width: 768px) {
+    .tab-item button.round-btn {
+      width: 50px;
+      height: 50px;
+    }
   }
 }

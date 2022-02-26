@@ -27,5 +27,9 @@
     padding-bottom: max(6rem, 20vh);
     align-items: end;
   }
+
+  .explore {
+    justify-self: end;
+  }
 }
 

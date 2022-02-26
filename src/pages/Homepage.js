@@ -14,8 +14,8 @@ const Homepage = () => {
         outer space and not hover kind of on the edge of it. Well sit back, and relax 
         because we’ll give you a truly out of this world experience!</p>
       </div>
-      <div>
-        <LargeButton link="/destination " classes="uppercase ff-serif text-dark bg-white">
+      <div className={styles.explore}>
+        <LargeButton link="/destination" classes="uppercase ff-serif text-dark bg-white">
           Explore
         </LargeButton>
       </div>

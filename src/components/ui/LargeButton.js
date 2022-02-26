@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import ConditionalWrapper from "../helper/ConditionalWrapper";
 import styles from './LargeButton.module.css';
 
@@ -7,7 +8,7 @@ const LargeButton = (props) => {
   return (
     <ConditionalWrapper 
       condition={link !== '' || link !== undefined}
-      wrapperTrue={children => <a href={link} className={`${styles['large-button']} ${classes}`}>{children}</a>}
+      wrapperTrue={children => <Link to={link} className={`${styles['large-button']} ${classes}`}>{children}</Link>}
       wrapperFalse={children => <button className={classes}>{children}</button>}
     >
       {children}
